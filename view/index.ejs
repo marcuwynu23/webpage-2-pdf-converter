@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web to PDF Converter</title>
+    <!-- Bootstrap CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-/wB5mKj5DRFGrNdJ9XUysJ6toFGnu2P+o6zB8kJyFX21nE70q3ahop+Y1so9XpZukJ4I4+nn4aE5yHnJqv5ig=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">
+        <i class="fas fa-file-pdf"></i>
+        Web to PDF Converter
+      </h1>
+      <% if (result) { %>
+      <p class="alert alert-success"><%= result %></p>
+      <% } %>
+      <p class="lead">
+        Welcome to our web to PDF converter! With this tool, you can easily
+        convert any web page to a PDF file.
+      </p>
+      <p>
+        Simply enter the URL of the web page you want to convert, and click the
+        "Convert" button. The PDF file will be generated and ready to download
+        in no time!
+      </p>
+      <form action="/convert" method="post">
+        <div class="form-group">
+          <label for="url">Enter URL:</label>
+          <input
+            type="text"
+            id="url"
+            name="url"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-file-pdf"></i>
+          Convert
+        </button>
+      </form>
+    </div>
+    <!-- Bootstrap and jQuery CDN scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
